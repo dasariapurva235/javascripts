@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Javascript Projects-Roman Numeral Conversion</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <div class="msg"></div>
+        <div>
+          <label for="name">Enter number to convert:</label>
+          <input type="text" id="num">
+        </div>
+        <input class="btn" onclick = "convertroman(num);" type="submit" value="Submit">
+      </form>
+
+      <ul id="users"></ul>
+
+    </section>
+    <script type = "text/JavaScript">
+        function convertroman() {
+          var num=document.getElementById(num); 
+ var decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  var romanNum = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+
+  var roman = "";
+
+  for (var index = 0; index < decimal.length; index++) {
+    while (decimal[index] <= num) {
+      roman += romanNum[index];
+      num -= decimal[index];
+    }
+  }
+    alert(roman);
+}
+      </script>
+  </body>
+</html>
