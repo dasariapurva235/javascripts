@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Javascript Projects-Palindrome Checker</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <div class="msg"></div>
+        <div>
+          <label for="name">Enter text:</label>
+          <input type="text" id="name">
+        </div>
+        <input class="btn" onclick = "palindrome(name);" type="submit" value="Submit">
+      </form>
+
+      <ul id="users"></ul>
+
+    </section>
+    
+
+   
+      <script type = "text/JavaScript">
+         function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  if(reverseStr===lowRegStr)
+    window.alert('This is a palindrome');
+  else if(reverseStr!=lowRegStr)
+    window.alert('This is not a palindrome');
+}
+      </script>
+  </body>
+</html>
